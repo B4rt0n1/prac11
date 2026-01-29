@@ -6,6 +6,11 @@ const { MongoClient, ObjectId } = require("mongodb");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Listening on port ${PORT}`);
+});
+
 const MONGO_URI = process.env.MONGO_URI;
 const DB_NAME = process.env.DB_NAME || "shop";
 const COLLECTION_NAME = process.env.COLLECTION_NAME || "products";
